@@ -9,13 +9,18 @@ kat hist hiv_sample.fastq
 As datasets (i), (iii) and (iv) had  a coverage of ~200000x and dataset (ii) had a coverage of ~150000x, no normalization over the counts was performed. At low k-mer counts exponentially more distinct k-mers are found compared to higher counts, and a log scaling was performed on the number of distinct k-mers, followed by a min-max normalization. For a more clear visualization, while retaining the original shape of the graph, 1D Gaussian smoothing was applied on the log scaled, normalized number of distinct k-mers, with a standard deviation of 5 [2].
 
 Log-scaling:
-$$ y_{i,log\ scaled} = ln(y_i+1) $$
+```math y_{i,log\ scaled} = ln(y_i+1)
+```
 
 Min-max normalization:
-$$ y_{i,normalized} = \frac{y_{i} - min(y)}{max(y)} $$
+```math
+y_{i,normalized} = \frac{y_{i} - min(y)}{max(y)}
+```
 
 1D Gaussian smoothing:
-$$ y_smoothed = scipy.gaussian_filter1d(y, 5) $$
+```math
+y_smoothed = scipy.gaussian_filter1d(y, 5)
+```
 
 
 ## Usage
