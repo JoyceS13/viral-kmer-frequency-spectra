@@ -20,7 +20,7 @@ y_{i,normalized} = \frac{y_{i} - min(y)}{max(y)}
 
 1D Gaussian smoothing:
 ```math
-y_smoothed = scipy.gaussian_filter1d(y, 5)
+y_{smoothed} = scipy.gaussian\_filter1d(y, 5)
 ```
 
 
